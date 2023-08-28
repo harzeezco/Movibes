@@ -1,31 +1,47 @@
 import { styled } from 'styled-components';
 
-import Logo from '../assets/images/logo.png';
 import Row from '../UI/Row';
+import Logo from './Logo';
+import Button from './Button';
+
+const sideNavArr = [
+  {
+    id: 1,
+    icon: <ion-icon name="home-outline"></ion-icon>,
+    text: 'Home',
+  },
+  {
+    id: 2,
+    icon: <ion-icon name="videocam-outline"></ion-icon>,
+    text: 'Movie',
+  },
+  {
+    id: 3,
+    icon: <ion-icon name="play-circle-outline"></ion-icon>,
+    text: 'Watched',
+  },
+];
 
 const SidebarStyles = styled.aside`
   grid-row: 1 / -1;
   background-color: var(--color-dark-secondary);
+  border-top-right-radius: 4rem;
 `;
 
 const Sidebar = () => {
   return (
     <SidebarStyles>
-      <img src={Logo} alt="Movibes Logo" />
-      <Row direction="vertical">
-        <button>
-          <span>
-            <ion-icon name="videocam-outline"></ion-icon>
-          </span>
-          <span>Movie</span>
-        </button>
+      <Logo />
 
-        <button>
-          <span>
-            <ion-icon name="play-circle-outline"></ion-icon>
-          </span>
-          <span>watchedMovie</span>
-        </button>
+      <Row direction="vertical" padding="large">
+        {sideNavArr.map((items) => (
+          <Button key={items.id}>
+            <Row direction="default">
+              <span>{items.icon}</span>
+              <span>{items.text}</span>
+            </Row>
+          </Button>
+        ))}
       </Row>
     </SidebarStyles>
   );

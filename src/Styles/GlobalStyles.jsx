@@ -10,7 +10,7 @@ export const GlobalStyles = createGlobalStyle`
    --color-dark-tertiary: #666666;
 
    --color-white: #fff;
-   --color-white-light: #E8E8E8;
+   --color-white-light: #fffdfd;
 
    --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
    line-height: 1.5;
@@ -56,7 +56,7 @@ export const GlobalStyles = createGlobalStyle`
    margin: 0;
 
    /* Creating animations for dark mode */
-   transition: background-color 0.3s, border 0.3s;
+   transition: background-color 0.4s, border 0.3s;
    }
 
    html {
