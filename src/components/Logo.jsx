@@ -4,7 +4,7 @@ import AppLogo from '../assets/images/logo.png';
 const LogoStyles = styled.div`
   text-align: center;
   height: 5rem;
-  padding: 2rem 0;
+  padding: 2.5rem 0;
 `;
 
 const Logo = () => {

@@ -26,10 +26,20 @@ const Row = styled.div`
     `}
 
     ${(props) =>
-    props.padding === 'large' &&
+    props.paddingTop === 'large' &&
     css`
-      margin-top: 8rem;
+      margin-top: 6rem;
+    `}
+
+    ${(props) =>
+    props.justify === 'center' &&
+    css`
+      align-items: center;
     `}
 `;
+
+Row.defaultProps = {
+  direction: 'vertical',
+};
 
 export default Row;

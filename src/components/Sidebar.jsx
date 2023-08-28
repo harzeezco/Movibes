@@ -2,7 +2,10 @@ import { styled } from 'styled-components';
 
 import Row from '../UI/Row';
 import Logo from './Logo';
-import Button from './Button';
+
+import RegularList from './RegularList';
+import SideLinks from './SideLinks';
+import SmallBox from './SmallBox';
 
 const sideNavArr = [
   {
@@ -33,16 +36,15 @@ const Sidebar = () => {
     <SidebarStyles>
       <Logo />
 
-      <Row direction="vertical" padding="large">
-        {sideNavArr.map((items) => (
-          <Button key={items.id}>
-            <Row direction="default">
-              <span>{items.icon}</span>
-              <span>{items.text}</span>
-            </Row>
-          </Button>
-        ))}
+      <Row direction="vertical" paddingTop="large">
+        <RegularList
+          items={sideNavArr}
+          resorceName="items"
+          itemComponent={SideLinks}
+        />
       </Row>
+
+      <SmallBox />
     </SidebarStyles>
   );
 };
