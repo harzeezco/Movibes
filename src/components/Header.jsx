@@ -1,13 +1,23 @@
-import { styled } from "styled-components"
+import { styled } from 'styled-components';
+import Row from '../UI-Logic/Row';
+import Searchbox from './Searchbox';
+import Notification from './Notification';
 
 const HeaderStyles = styled.header`
-  background-color: blue;
-`
+  background-color: inherit;
+  padding: 4rem 4rem 2.5rem;
+`;
 
 const Header = () => {
   return (
-    <HeaderStyles>Header</HeaderStyles>
-  )
-}
+    <HeaderStyles>
+      <Row direction="horizontal">
+        <Searchbox />
 
-export default Header
+        <Notification />
+      </Row>
+    </HeaderStyles>
+  );
+};
+
+export default Header;

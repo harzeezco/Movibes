@@ -15,7 +15,7 @@ function App() {
           <Route path="/" element={<PageLayout />}>
             <Route path="/" index element={<Home />} />
             <Route path="/movie" element={<Movies />} />
-            <Route path="/watchmovie" element={<WatchMovie />} />
+            <Route path="/watchedmovie" element={<WatchMovie />} />
           </Route>
 
           <Route path="*" element={<ErrorPage />} />

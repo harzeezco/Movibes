@@ -1,17 +1,20 @@
 import PropTypes from 'prop-types';
 
-import Row from '../UI/Row';
+import Row from '../UI-Logic/Row';
 import Button from './Button';
+import { Link } from 'react-router-dom';
 
 const SideLinks = ({ items }) => {
-  const { id, icon, text } = items;
+  const { id, icon, text, route } = items;
 
   return (
-    <Button key={id}>
-      <Row direction="default">
-        <span>{icon}</span>
-        <span>{text}</span>
-      </Row>
+    <Button key={id} size="large">
+      <Link to={route}>
+        <Row direction="default">
+          <span className="sidelink-icon">{icon}</span>
+          <span>{text}</span>
+        </Row>
+      </Link>
     </Button>
   );
 };
@@ -21,6 +24,7 @@ SideLinks.propTypes = {
   id: PropTypes.number,
   icon: PropTypes.node,
   text: PropTypes.string,
+  route: PropTypes.string,
 };
 
 export default SideLinks;

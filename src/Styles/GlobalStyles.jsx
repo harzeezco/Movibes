@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
    :root {
@@ -10,16 +10,17 @@ export const GlobalStyles = createGlobalStyle`
    --color-dark-tertiary: #666666;
 
    --color-white: #fff;
-   --color-white-light: #fffdfd;
+   --color-white-light: #d2d1d1;
 
    --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
    line-height: 1.5;
    --color-scheme: light dark;
 
 
-   --font-weight-small: 400;
-   --font-weight-medium: 500;
-   --font-weight-large: 700;
+   --font-weight-sm: 400;
+   --font-weight-md: 500;
+   --font-weight-xm: 600;
+   --font-weight-lg: 700;
 
 
    
@@ -39,6 +40,7 @@ export const GlobalStyles = createGlobalStyle`
    --border-radius-sm: 7px;
    --border-radius-md: 9px;
    --border-radius-lg: 12px;
+   --border-radius-xlg: 20px;
 
    /* For dark mode */
    --image-grayscale: 0;
@@ -65,12 +67,11 @@ export const GlobalStyles = createGlobalStyle`
 
    body {
    font-family: "Poppins", sans-serif;
-   color: var(--color-grey-700);
-
+   font-weight: 400;
    transition: color 0.3s, background-color 0.3s;
    min-height: 100vh;
    line-height: 1.5;
-   font-size: 1.6rem;
+   background-color: #191919;
    }
 
    input,
@@ -133,5 +134,29 @@ export const GlobalStyles = createGlobalStyle`
 
    /* For dark mode */
    filter: grayscale(var(--image-grayscale)) opacity(var(--image-opacity));
+   }
+
+   .sidelink-icon {
+      font-size: 1.8rem;
+      padding-top: 5px;
+   }
+   
+   .start-watching-heading {
+      font-size: 1.4rem;
+      font-weight: var(--font-weight-xm);
+   }
+
+   .start-watching-count {
+      font-size: 1.2rem;   
+      color: var(--color-dark-tertiary);
+   }
+
+   .watching-icon {
+      height: 3.5rem;
+   }
+
+   .input-search-icon {
+      font-size: 2rem;
+      padding-top: 5px;
    }
 `;

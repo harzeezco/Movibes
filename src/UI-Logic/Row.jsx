@@ -28,7 +28,7 @@ const Row = styled.div`
     ${(props) =>
     props.paddingTop === 'large' &&
     css`
-      margin-top: 6rem;
+      margin-top: 5rem;
     `}
 
     ${(props) =>
