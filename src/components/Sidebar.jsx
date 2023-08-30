@@ -40,7 +40,7 @@ const Sidebar = () => {
     <SidebarStyles>
       <Logo />
 
-      <Row direction="vertical" paddingTop="large">
+      <Row direction="vertical" paddingtop="large">
         <RegularList
           items={sideNavArr}
           resorceName="items"

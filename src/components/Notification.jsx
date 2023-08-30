@@ -1,15 +1,17 @@
 import { styled } from 'styled-components';
 
 const NotificationBoxStyles = styled.div`
-  width: 5rem;
-  height: 5rem;
-  border-radius: 50%;
+  font-size: 2rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: var(--border-radius-rounded);
   background-color: var(--color-dark-secondary);
+  color: #fff;
 `;
 
 const Notification = () => {
   return (
-    <NotificationBoxStyles>
+    <NotificationBoxStyles className="center">
       <span>
         <ion-icon name="notifications-outline"></ion-icon>
       </span>

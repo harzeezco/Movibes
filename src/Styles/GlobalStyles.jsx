@@ -41,6 +41,7 @@ export const GlobalStyles = createGlobalStyle`
    --border-radius-md: 9px;
    --border-radius-lg: 12px;
    --border-radius-xlg: 20px;
+   --border-radius-rounded: 50%;
 
    /* For dark mode */
    --image-grayscale: 0;
@@ -69,9 +70,10 @@ export const GlobalStyles = createGlobalStyle`
    font-family: "Poppins", sans-serif;
    font-weight: 400;
    transition: color 0.3s, background-color 0.3s;
-   min-height: 100vh;
+   /* min-height: 100vh; */
    line-height: 1.5;
    background-color: #191919;
+   color: var(--color-white-light);
    }
 
    input,
@@ -158,5 +160,12 @@ export const GlobalStyles = createGlobalStyle`
    .input-search-icon {
       font-size: 2rem;
       padding-top: 5px;
+   }
+
+   .center {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
    }
 `;

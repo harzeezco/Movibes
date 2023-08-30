@@ -7,7 +7,7 @@ const Container = styled.div`
    display: grid;
    grid-template-columns: 23rem 1fr;
    grid-template-rows: auto 1fr;
-   min-height: 100vh;
+   /* min-height: 100vh; */
 `
 
 const PageLayout = () => {

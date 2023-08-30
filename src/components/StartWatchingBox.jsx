@@ -18,20 +18,17 @@ const WatchingIconBoxStyles = styled.div`
   background-color: var(--color-secondary);
   width: 5rem;
   height: 5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
+  border-radius: var(--border-radius-rounded);
   margin-top: -3.5rem;
 `;
 
 const StartWatchingBox = () => {
   return (
-    <Row justify="center" paddingTop="large">
+    <Row justify="center" paddingtop="large">
       <StartWatchingBoxStyles>
         <Row>
           <Row direction="default">
-            <WatchingIconBoxStyles>
+            <WatchingIconBoxStyles className="center">
               <img
                 className="watching-icon"
                 src={WatchingIcon}
