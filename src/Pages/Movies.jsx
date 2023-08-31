@@ -6,14 +6,10 @@ import Loader from '../components/Loader';
 import Error from '../components/Error';
 
 const Movies = ({ movies, error, isLoading }) => {
-   
-
-
   if (movies.length === 0) {
     return (
       <div className="center" style={{ marginTop: '7rem' }}>
         <Loader />
-        <h3>Start Searching for Movies</h3>
       </div>
     );
   }
@@ -31,6 +27,7 @@ const Movies = ({ movies, error, isLoading }) => {
               itemComponent={Movie}
               items={movies}
               movieSize="22rem"
+              showDetails={true}
             />
           </Box>
         )}

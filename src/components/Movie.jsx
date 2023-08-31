@@ -22,6 +22,7 @@ const MovieImageBoxStyles = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 
   &:hover {
     ${Content} {
@@ -67,6 +68,7 @@ const Movie = ({
   fontsize = '1.3rem',
   backgroundcolor = 'hsla(0, 0%, 90%, 0.15)',
   items,
+  showDetails,
 }) => {
   const { img, rating, Poster } = items;
 
@@ -91,13 +93,15 @@ const Movie = ({
         </RatingStyles>
       )}
 
-      <Content className="content">
-        <Row direction="horizontal" className="sci">
-          <Button size="small">See Details</Button>
+      {showDetails && (
+        <Content className="content">
+          <Row direction="horizontal" className="sci">
+            <Button size="small">See Details</Button>
 
-          <Button size="small">Add to watchlist</Button>
-        </Row>
-      </Content>
+            <Button size="small">Add to watchlist</Button>
+          </Row>
+        </Content>
+      )}
 
       <MovieStyles width={width} height={height} src={img || Poster} alt="" />
     </MovieImageBoxStyles>

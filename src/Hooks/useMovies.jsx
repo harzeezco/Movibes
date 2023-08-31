@@ -43,6 +43,11 @@ const useMovies = (query) => {
 
     fetchMovies();
 
+    if (query.length < 3) {
+      setMovies([]);
+      setIsLoaing(false);
+    }
+
     return () => controller.abort();
   }, [query]);
 

@@ -1,5 +1,7 @@
 import { styled } from 'styled-components';
 import Row from '../UI-Logic/Row';
+import useKey from '../Hooks/useKey';
+import { useNavigate } from 'react-router-dom';
 
 const SearchboxStyles = styled.div`
   font-weight: var(--font-weight-xm);
@@ -28,11 +30,19 @@ const FormStyles = styled.form`
 `;
 
 const Searchbox = ({ query, setQuery }) => {
+  const domRef = useKey('Enter');
+  const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setQuery('');
   };
-  
+
+  const handleQueryInput = (e) => {
+    setQuery(e.target.value);
+    navigate('/movie');
+  };
+
   return (
     <SearchboxStyles>
       <Row direction="default">
@@ -42,9 +52,10 @@ const Searchbox = ({ query, setQuery }) => {
         <FormStyles onSubmit={handleSubmit}>
           <InputStyles
             value={query}
-            onChange={(e) => setQuery(e.target.value)}
+            onChange={handleQueryInput}
             type="text"
             placeholder="Search for movies..."
+            ref={domRef}
           />
         </FormStyles>
       </Row>

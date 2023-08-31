@@ -5,6 +5,7 @@ const RegularList = ({
   resorceName,
   itemComponent: ItemComponent,
   movieSize,
+  showDetails
 }) => {
   return (
     <>
@@ -13,6 +14,7 @@ const RegularList = ({
           key={item.id || item.imdbID}
           {...{ [resorceName]: item }}
           width={movieSize}
+          showDetails={showDetails}
         />
       ))}
     </>
