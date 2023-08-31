@@ -1,8 +1,12 @@
+import Box from "../components/Box"
 
 
 const WatchMovie = () => {
   return (
-    <div>WatchMovie</div>
+    <Box>
+      WatchMovie
+      
+    </Box>
   )
 }
 

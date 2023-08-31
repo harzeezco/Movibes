@@ -8,11 +8,11 @@ const HeaderStyles = styled.header`
   padding: 4rem 4rem 2.5rem;
 `;
 
-const Header = () => {
+const Header = (props) => {
   return (
     <HeaderStyles>
       <Row direction="horizontal">
-        <Searchbox />
+        <Searchbox {...props} />
 
         <Notification />
       </Row>

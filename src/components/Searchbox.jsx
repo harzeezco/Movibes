@@ -23,14 +23,30 @@ const InputStyles = styled.input`
   }
 `;
 
-const Searchbox = () => {
+const FormStyles = styled.form`
+  width: 100%;
+`;
+
+const Searchbox = ({ query, setQuery }) => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setQuery('');
+  };
+  
   return (
     <SearchboxStyles>
       <Row direction="default">
         <span className="input-search-icon">
           <ion-icon name="search-outline"></ion-icon>
         </span>
-        <InputStyles type="text" placeholder="Search for movies..." />
+        <FormStyles onSubmit={handleSubmit}>
+          <InputStyles
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            type="text"
+            placeholder="Search for movies..."
+          />
+        </FormStyles>
       </Row>
     </SearchboxStyles>
   );

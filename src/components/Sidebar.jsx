@@ -33,6 +33,10 @@ const SidebarStyles = styled.aside`
   background-color: var(--color-dark-secondary);
   border-top-right-radius: 3rem;
   border-bottom-right-radius: 3rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100vh;
 `;
 
 const Sidebar = () => {

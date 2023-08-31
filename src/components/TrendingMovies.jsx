@@ -2,9 +2,8 @@ import PropTypes from 'prop-types';
 import Row from '../UI-Logic/Row';
 import RegularList from './RegularList';
 
-import MovieImage from '../components/MovieImage';
-
 import { styled } from 'styled-components';
+import Movie from './Movie';
 
 const TrendingMovieStyles = styled.div`
   padding: 2rem 0;
@@ -26,7 +25,7 @@ const TrendingMovies = ({ category, categoryHeading }) => {
         <RegularList
           items={category}
           resorceName="items"
-          itemComponent={MovieImage}
+          itemComponent={Movie}
         />
       </Row>
     </TrendingMovieStyles>

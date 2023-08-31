@@ -1,6 +1,6 @@
 import { styled } from 'styled-components';
 
-const NotificationBoxStyles = styled.div`
+const NotificationStyles = styled.div`
   font-size: 2rem;
   width: 4.5rem;
   height: 4.5rem;
@@ -11,11 +11,11 @@ const NotificationBoxStyles = styled.div`
 
 const Notification = () => {
   return (
-    <NotificationBoxStyles className="center">
+    <NotificationStyles className="center">
       <span>
         <ion-icon name="notifications-outline"></ion-icon>
       </span>
-    </NotificationBoxStyles>
+    </NotificationStyles>
   );
 };
 

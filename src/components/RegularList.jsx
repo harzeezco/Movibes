@@ -1,10 +1,19 @@
 import PropTypes from 'prop-types';
 
-const RegularList = ({ items, resorceName, itemComponent: ItemComponent }) => {
+const RegularList = ({
+  items,
+  resorceName,
+  itemComponent: ItemComponent,
+  movieSize,
+}) => {
   return (
     <>
       {items.map((item) => (
-        <ItemComponent key={item.id} {...{ [resorceName]: item }} />
+        <ItemComponent
+          key={item.id || item.imdbID}
+          {...{ [resorceName]: item }}
+          width={movieSize}
+        />
       ))}
     </>
   );

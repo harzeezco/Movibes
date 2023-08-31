@@ -24,7 +24,7 @@ const FeatureHeadingStyles = styled.h5`
 
 const FeatureBox = ({ feature, featureHeading }) => {
   return (
-    <div>
+    <>
       <FeatureHeadingStyles>{featureHeading}</FeatureHeadingStyles>
       <FeaturedMoviesStyles>
         <RegularList
@@ -34,7 +34,7 @@ const FeatureBox = ({ feature, featureHeading }) => {
           itemComponent={Features}
         />
       </FeaturedMoviesStyles>
-    </div>
+    </>
   );
 };
 
