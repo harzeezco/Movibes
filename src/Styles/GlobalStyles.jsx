@@ -245,5 +245,8 @@ export const GlobalStyles = createGlobalStyle`
     color: var(--color-white-light);
     border-right: 7px solid var(--color-primary);
   }
-
+   
+   .votes {
+      color: var(--color-dark-tertiary);
+   }
 `;

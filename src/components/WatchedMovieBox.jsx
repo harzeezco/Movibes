@@ -8,6 +8,10 @@ const WatchedMovieStyles = styled.div`
   max-width: 19rem;
   background-color: var(--color-dark-secondary);
   padding: 0.5rem 0.7rem;
+
+  p {
+    font-size: 1.3rem;
+  }  
 `;
 
 const WatchedMovieBox = ({ items, onDeleteWatchedMovie }) => {
@@ -17,7 +21,7 @@ const WatchedMovieBox = ({ items, onDeleteWatchedMovie }) => {
     <WatchedMovieStyles>
       <Movie items={items} />
       <Row direction="horizontal" style={{ paddingTop: '10px' }}>
-        <p style={{ fontSize: '1.3rem' }}>{title}</p>
+        <p>{title}</p>
 
         <Row direction="default">
           {isLike && (
