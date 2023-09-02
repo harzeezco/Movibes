@@ -10,24 +10,21 @@ const BtnStyles = styled.button`
   &:active {
     background-color: var(--color-secondary);
     color: var(--color-white-light);
-    border-right: 7px solid var(--color-primary);
   }
 
   ${(props) =>
-    props.size === 'large' &&
+    props.size === 'meduim_Large' &&
     css`
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       font-weight: var(--font-weight-large);
-      padding: 1.5rem 0;
-      background-color: inherit;
-      color: var(--color-dark-tertiary);
-      border-radius: 0;
+      padding: 1.5rem 1rem;
+      background-color: #2b938f;
+      color: var(--color-white-light);
+      border-radius: var(--border-radius-lg);
 
       &:hover,
       &:active {
-        background-color: var(--color-secondary);
-        color: var(--color-white-light);
-        border-right: 7px solid var(--color-primary);
+        border-right: 0;
       }
     `}
 
@@ -36,13 +33,52 @@ const BtnStyles = styled.button`
     css`
       font-size: 1.2rem;
       padding: 5px 0;
+
+      &:hover {
+        border-left: 6px solid var(--color-primary);
+      }
     `}
+
+
 
       ${(props) =>
     props.size === 'small' &&
     css`
-      font-size: 0.9rem;
-      padding: 5px 1rem;
+      font-size: 1rem;
+      padding: 5px 1.3rem;
+
+      &:hover {
+        border-left: 6px solid var(--color-primary);
+      }
+    `}
+
+     ${(props) =>
+    props.hover_none &&
+    css`
+      background-color: inherit;
+      border: 1px solid var(--color-dark-tertiary);
+
+      &:hover {
+        background-color: inherit;
+        color: inherit;
+        border-right: 0;
+      }
+    `}
+
+    ${(props) =>
+    props.size === 'xtra_small' &&
+    css`
+      background-color: #b91a4c;
+      color: var(--color-white-light);
+      padding: 3px 7px;
+      border-radius: 50%;
+      font-size: 1.2rem;
+
+      &:hover {
+        /* background-color: inherit;
+        color: inherit;
+        border-right: 0; */
+      }
     `}
 `;
 

@@ -1,17 +1,17 @@
 import { useEffect, useState } from 'react';
 
-const useLocalStorage = (innitialState) => {
-  const [storage, setStorage] = useState(() => {
-    const innitialStorage = localStorage.getItem('key');
+const useLocalStorage = (initialState) => {
+  const [watched, setWatched] = useState(() => {
+    const initialStorage = localStorage.getItem('key');
 
-    return innitialStorage ? JSON.parse(innitialStorage) : null;
+    return initialStorage ? JSON.parse(initialStorage) : initialState;
   });
 
   useEffect(() => {
-    localStorage.setItem('key', JSON.stringify(innitialState));
-  }, [innitialState]);
+    localStorage.setItem('key', JSON.stringify(watched));
+  }, [watched]);
 
-  return [storage, setStorage];
+  return [watched, setWatched];
 };
 
 export default useLocalStorage;

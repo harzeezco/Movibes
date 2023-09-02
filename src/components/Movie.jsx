@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { styled } from 'styled-components';
 import Row from '../UI-Logic/Row';
 import Button from './Button';
+import { useNavigate } from 'react-router-dom';
+import BtnStyles from '../UI-Logic/BtnStyles';
 
 const Content = styled.div`
   position: absolute;
@@ -70,11 +72,17 @@ const Movie = ({
   items,
   showDetails,
 }) => {
-  const { img, rating, Poster } = items;
+  const navigate = useNavigate();
+
+  const { img, rating, Poster, imdbID, poster, userRating } = items;
+
+  const handleNavigateToDetails = () => {
+    navigate(`/movies/${imdbID}`);
+  };
 
   return (
     <MovieImageBoxStyles width={width} height={height}>
-      {rating && (
+      {rating || userRating ? (
         <RatingStyles font={fontsize} background={backgroundcolor}>
           <StarIcon
             xmlns="http://www.w3.org/2000/svg"
@@ -89,21 +97,31 @@ const Movie = ({
             />
           </StarIcon>
 
-          <span>{rating}</span>
+          <span>{rating || userRating}</span>
         </RatingStyles>
-      )}
+      ) : null}
 
       {showDetails && (
         <Content className="content">
           <Row direction="horizontal" className="sci">
-            <Button size="small">See Details</Button>
+            <Button
+              size="small"
+              onNavigateToDetails={imdbID && handleNavigateToDetails}
+            >
+              See Details
+            </Button>
 
-            <Button size="small">Add to watchlist</Button>
+            <BtnStyles size="small">Add to watchlist</BtnStyles>
           </Row>
         </Content>
       )}
 
-      <MovieStyles width={width} height={height} src={img || Poster} alt="" />
+      <MovieStyles
+        width={width}
+        height={height}
+        src={img || Poster || poster}
+        alt=""
+      />
     </MovieImageBoxStyles>
   );
 };
@@ -117,6 +135,7 @@ Movie.propTypes = {
   fontsize: PropTypes.string,
   image: PropTypes.string,
   items: PropTypes.object,
+  showDetails: PropTypes.bool,
 };
 
 export default Movie;

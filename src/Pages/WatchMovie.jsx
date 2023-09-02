@@ -1,13 +1,26 @@
-import Box from "../components/Box"
+import PropTypes from 'prop-types';
+import Box from '../components/Box';
+import RegularList from '../components/RegularList';
+import WatchedMovieBox from '../components/WatchedMovieBox';
 
-
-const WatchMovie = () => {
+const WatchMovie = ({ watched, onDeleteWatchedMovie }) => {
   return (
-    <Box>
-      WatchMovie
-      
-    </Box>
-  )
-}
+    <>
+      <Box column={4}>
+        <RegularList
+          resorceName="items"
+          itemComponent={WatchedMovieBox}
+          items={watched}
+          onDeleteWatchedMovie={onDeleteWatchedMovie}
+        />
+      </Box>
+    </>
+  );
+};
 
-export default WatchMovie
+WatchMovie.propTypes = {
+  watched: PropTypes.array,
+  onDeleteWatchedMovie: PropTypes.func,
+};
+
+export default WatchMovie;

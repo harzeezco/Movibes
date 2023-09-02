@@ -18,7 +18,7 @@ const sideNavArr = [
     id: 2,
     icon: <ion-icon name="videocam-outline"></ion-icon>,
     text: 'Movie',
-    route: '/movie',
+    route: '/movies',
   },
   {
     id: 3,
@@ -36,6 +36,7 @@ const SidebarStyles = styled.aside`
   position: sticky;
   top: 0;
   left: 0;
+  bottom: 0;
   height: 100vh;
 `;
 

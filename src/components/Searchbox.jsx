@@ -40,7 +40,7 @@ const Searchbox = ({ query, setQuery }) => {
 
   const handleQueryInput = (e) => {
     setQuery(e.target.value);
-    navigate('/movie');
+    navigate('/movies');
   };
 
   return (

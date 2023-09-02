@@ -4,6 +4,7 @@ import { styled } from 'styled-components';
 import Button from './Button';
 
 import WatchingIcon from '../assets/icons/Watched-confirmed.svg';
+import { useNavigate } from 'react-router-dom';
 
 const StartWatchingBoxStyles = styled.div`
   background-color: var(--color-dark-primary);
@@ -23,6 +24,12 @@ const WatchingIconBoxStyles = styled.div`
 `;
 
 const StartWatchingBox = () => {
+  const navigate = useNavigate();
+
+  const handleNavigateToMovies = () => {
+    navigate('/movies');
+  };
+
   return (
     <Row justify="center" paddingtop="large">
       <StartWatchingBoxStyles>
@@ -43,7 +50,9 @@ const StartWatchingBox = () => {
 
           <p className="start-watching-count">50k people are watching now</p>
 
-          <Button size="medium">Start Watching</Button>
+          <Button size="medium" onNavigateToMovies={handleNavigateToMovies}>
+            Start Watching
+          </Button>
         </Row>
       </StartWatchingBoxStyles>
     </Row>

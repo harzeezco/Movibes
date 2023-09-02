@@ -11,9 +11,17 @@ const BoxStyles = styled.div`
     `}
 
   ${(props) =>
-    props.column === 4 &&
+    props.column === 3 &&
     css`
       grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    `}
+
+    ${(props) =>
+    props.column === 4 &&
+    css`
+      grid-template-columns: repeat(4, 1fr);
       gap: 2rem;
       margin-top: 3rem;
     `}

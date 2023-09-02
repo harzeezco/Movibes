@@ -11,6 +11,13 @@ const Row = styled.div`
     `}
 
   ${(props) =>
+    props.direction === 'vertical' &&
+    props.big_gap &&
+    css`
+      gap: 3rem;
+    `}
+
+  ${(props) =>
     props.direction === 'horizontal' &&
     css`
       justify-content: space-between;
@@ -26,6 +33,13 @@ const Row = styled.div`
     `}
 
     ${(props) =>
+    props.direction === 'horizon' &&
+    css`
+      align-items: center;
+      gap: 1rem;
+    `}
+
+    ${(props) =>
     props.paddingtop === 'large' &&
     css`
       margin-top: 5rem;
@@ -35,7 +49,10 @@ const Row = styled.div`
     props.justify === 'center' &&
     css`
       align-items: center;
+      gap: 2rem;
     `}
+
+    
 `;
 
 Row.defaultProps = {

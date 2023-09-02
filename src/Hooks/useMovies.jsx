@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react';
 
 const KEY = '6ce8a8ba';
 
-const useMovies = (query) => {
+const useMovies = (query, params) => {
   const [movies, setMovies] = useState([]);
+  const [movieDetails, setMovieDetails] = useState([]);
   const [isLoading, setIsLoaing] = useState(false);
   const [error, setError] = useState('');
 
@@ -16,7 +17,7 @@ const useMovies = (query) => {
         setIsLoaing(true);
 
         const res = await fetch(
-          `http://www.omdbapi.com/?apikey=${KEY}&s=${query}`,
+          `http://www.omdbapi.com/?apikey=${KEY}&${params}=${query}`,
           { signal: controller.signal }
         );
 
@@ -28,7 +29,7 @@ const useMovies = (query) => {
         if (data.Response === 'False') {
           throw new Error('The Movie is not found');
         }
-
+        setMovieDetails([data]);
         setMovies(data.Search);
         setIsLoaing('');
         setError('');
@@ -49,9 +50,9 @@ const useMovies = (query) => {
     }
 
     return () => controller.abort();
-  }, [query]);
+  }, [query, params]);
 
-  return { movies, error, isLoading };
+  return { movies, error, isLoading, movieDetails };
 };
 
 export default useMovies;

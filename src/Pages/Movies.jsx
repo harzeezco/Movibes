@@ -1,39 +1,38 @@
 // import styled, { keyframes } from 'styled-components';
-import Box from '../components/Box';
-import RegularList from '../components/RegularList';
-import Movie from '../components/Movie';
-import Loader from '../components/Loader';
-import Error from '../components/Error';
+import PropTypes from 'prop-types';
 
-const Movies = ({ movies, error, isLoading }) => {
-  if (movies.length === 0) {
-    return (
-      <div className="center" style={{ marginTop: '7rem' }}>
-        <Loader />
-      </div>
-    );
-  }
+import { Route, Routes } from 'react-router-dom';
+import MoviesBox from '../components/MoviesBox';
+import MovieDetails from './MovieDetails';
 
+const Movies = ({ props, onAddWatchedMovie, watched }) => {
   return (
-    <Box column={2}>
-      <section>
-        {isLoading && <Loader />}
-        {error && <Error message={error} />}
-
-        {!error && !isLoading && (
-          <Box column={4}>
-            <RegularList
-              resorceName="items"
-              itemComponent={Movie}
-              items={movies}
-              movieSize="22rem"
-              showDetails={true}
+    <>
+      <Routes>
+        <Route
+          index
+          element={
+            <MoviesBox {...props} onAddWatchedMovie={onAddWatchedMovie} />
+          }
+        />
+        <Route
+          path="/:id"
+          element={
+            <MovieDetails
+              onAddWatchedMovie={onAddWatchedMovie}
+              watched={watched}
             />
-          </Box>
-        )}
-      </section>
-    </Box>
+          }
+        />
+      </Routes>
+    </>
   );
+};
+
+Movies.propTypes = {
+  props: PropTypes.object,
+  onAddWatchedMovie: PropTypes.func,
+  watched: PropTypes.array,
 };
 
 // const rotate = keyframes`

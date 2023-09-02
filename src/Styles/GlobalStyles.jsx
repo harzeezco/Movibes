@@ -239,6 +239,11 @@ export const GlobalStyles = createGlobalStyle`
    gap: 8px;
    margin-top: 5px;
    }
-
+   
+   .active {
+    background-color: var(--color-secondary);
+    color: var(--color-white-light);
+    border-right: 7px solid var(--color-primary);
+  }
 
 `;
