@@ -249,4 +249,21 @@ export const GlobalStyles = createGlobalStyle`
    .votes {
       color: var(--color-dark-tertiary);
    }
+
+   .actions button,
+   select {
+   text-transform: uppercase;
+   padding: 0.8rem 2.4rem;
+   font-size: 1.4rem;
+   font-weight: 700;
+   margin: 0 0.8rem;
+   }
+
+    select{
+      background-color: #2b938f;
+    }
+
+    select:hover option{
+      background-color: var(--color-secondary)
+    }
 `;

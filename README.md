@@ -1,10 +1,11 @@
 # Movibes Movie Application
 
-This is a solution to the [UI Design](https://www.figma.com/file/lBPMzecfIv2qIN2uCVBeoD/Movibes-Website-(Community)?type=design&node-id=158-2&mode=design&t=T3dDdIjRmZZck3OP-0). This helps my problem solving skills. 
+This is a solution to the [UI Design](https://www.figma.com/file/lBPMzecfIv2qIN2uCVBeoD/Movibes-Website-(Community)?type=design&node-id=158-2&mode=design&t=T3dDdIjRmZZck3OP-0). This is built for user who loves watching movies and don't have a go to application to search for a movie to watch.
 
 ## Table of contents
 
 - [Overview](#overview)
+  - [Development](#development)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
@@ -14,11 +15,57 @@ This is a solution to the [UI Design](https://www.figma.com/file/lBPMzecfIv2qIN2
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
+- [Contributing](#Contributing)
+- [Show-support](#Show your support)
+- [Acknowledgments](#Acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
+
+### Development (Running locally)
+
+- Clone the project
+
+```bash
+git clone https://github.com/harzeezco/Movibes.git
+
+```
+
+- Install Dependencies
+
+```bash
+npm install
+```
+
+To run StyleLint by itself, you may run the lint task:
+
+```bash
+npm run lint:check
+```
+
+Or to automatically fix issues found (where possible):
+
+```bash
+npm run lint
+```
+
+You can also check against Prettier:
+
+```bash
+npm run format:check
+```
+
+and to have it actually fix (to the best of its ability) any format issues, run:
+
+```bash
+npm run format
+```
+
+You can also check against HTML Validator:
+
+```bash
+npm run html-validator
+```
 
 ### The challenge
 
@@ -36,7 +83,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](./src/assets/images/Movibes.png)
+![Home page screenshot](./src/assets/images/Movibes.png)
+![Movies page screenshot](./src/assets/images/movibes-movies.png)
 
 
 ### Links
@@ -65,16 +113,38 @@ I learned how to create a fully functional application which deals with APIs
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [How to make React application faster](https://kentcdodds.com/blog/state-colocation-will-make-your-react-app-faster) - This helped me in how to make a React application faster. I really liked this pattern and will use it going forward.
+- [React optimization](https://alexsidorenko.com/blog/react-optimize-rerenders-without-refs-memo/) - This is a must look out blog for anyone optimizing a React appication.
+- [Guildelines to take when building React application](https://github.com/mithi/react-philosophies?ref=jonas.io) - This is an amazing article which helped me finally understand how real world React application are built. I'd recommend it to anyone still learning how to build React application.
+- [Web accessibilty](https://www.w3.org/WAI/fundamentals/) - This is absolutely for all developers. This shrpens your web accessibily skills which is some of the best things to consider on the user of the application.
 
-## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+## 👤 Author
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+### Wakil Azeez
 
+- Github: [@wakil-azeez](https://github.com/harzeezco)
+- Twitter: [@wakil-azeez](https://twitter.com/Wkhayzed)
+- INSTAGRAM: [@wakil-azeez](https://www.instagram.com/wakil_abdul_azeez/)
+
+
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- [W3c](https://www.w3.org/)
+
+## 📝 License
+
+[MIT licensed](./LICENSE).
 
 

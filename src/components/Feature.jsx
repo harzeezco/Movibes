@@ -10,19 +10,33 @@ const FeatureStyles = styled.div`
   }
 `;
 
+const CheckMarkStyles = styled.div`
+  background-color: var(--color-primary);
+  color: var(--color-dark-primary);
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    font-weight: var(--font-weight-lg);
+  }
+`;
+
 const Feature = ({ items }) => {
-  const { service, category, isActive } = items;
+  const { service, category } = items;
 
   return (
     <FeatureStyles>
       <Row direction="horizontal">
         <p>{service || category}</p>
-        <input
-          className="checkbox"
-          type="checkbox"
-          checked={isActive}
-          onChange={() => {}}
-        />
+        <CheckMarkStyles>
+          <span>
+            <ion-icon name="checkmark-outline"></ion-icon>
+          </span>
+        </CheckMarkStyles>
       </Row>
     </FeatureStyles>
   );

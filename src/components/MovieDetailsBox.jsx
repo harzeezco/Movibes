@@ -187,7 +187,7 @@ MovieDetailsBox.propTypes = {
   writer: PropTypes.string,
   Metmetascore: PropTypes.string,
   Rruntime: PropTypes.string,
-  Lalanguage: PropTypes.string,
+  Language: PropTypes.string,
   imdbVotes: PropTypes.string,
 };
 
