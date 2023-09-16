@@ -1,7 +1,7 @@
 import house from './src/assets/images/trending/house.png';
 import topGun from './src/assets/images/trending/TopGun.png';
 import nope from './src/assets/images/trending/Nope.png';
-
+import sanMan from './src/assets/images/trending/SanMan.png';
 
 
 import adam from './src/assets/images/upcoming/Adam.png';
@@ -27,7 +27,7 @@ export const trendingMovies = [
   },
   {
     id: 4,
-    img: adam,
+    img: sanMan,
     rating: 8,
   },
 ];
