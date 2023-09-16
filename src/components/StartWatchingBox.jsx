@@ -3,7 +3,7 @@ import Row from '../UI-Logic/Row';
 import { styled } from 'styled-components';
 import Button from './Button';
 
-import WatchingIcon from '../assets/icons/Watched-confirmed.svg';
+import WatchingIcon from '../assets/icons/watched-confirmed.svg';
 import { useNavigate } from 'react-router-dom';
 
 const StartWatchingBoxStyles = styled.div`
