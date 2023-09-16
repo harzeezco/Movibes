@@ -18,7 +18,7 @@ const Content = styled.div`
 `;
 
 const MovieImageBoxStyles = styled.div`
-  width: ${(props) => props.width};
+  max-width: ${(props) => props.width};
   height: ${(props) => props.height};
   position: relative;
   display: flex;
@@ -54,7 +54,8 @@ const RatingStyles = styled.div`
 `;
 
 const MovieStyles = styled.img`
-  width: ${(props) => props.width};
+  max-width: ${(props) => props.width};
+  width: 100%;
   height: ${(props) => props.height};
 `;
 
