@@ -16,7 +16,7 @@ This is a solution to the [UI Design](https://www.figma.com/file/lBPMzecfIv2qIN2
   - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Contributing](#Contributing)
-- [Show-support](#Show your support)
+- [Show-support](#Showyoursupport)
 - [Acknowledgments](#Acknowledgments)
 
 
