@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 
-const KEY = '6ce8a8ba';
 
 const useMovies = (query, params) => {
   const [movies, setMovies] = useState([]);
@@ -17,7 +16,9 @@ const useMovies = (query, params) => {
         setIsLoaing(true);
 
         const res = await fetch(
-          `http://www.omdbapi.com/?apikey=${KEY}&${params}=${query}`,
+          `http://www.omdbapi.com/?apikey=${
+            import.meta.env.VITE_API_KEY
+          }&${params}=${query}`,
           { signal: controller.signal }
         );
 
